@@ -1,0 +1,22 @@
+<form action="formFilterGames" method="post">
+  <div class="zoneNom">
+      <label for="name">Nom du jeu :</label>
+      <input placeholder="Nom du jeu" type="text" id="name" name="game_name">
+  </div>
+  <div class="zoneSelect">
+    <label for="game-select">Type de jeu:</label>
+    <div>
+      <select name="games" id="game-select" >
+        <option value="" *ngFor="let game of games; index as i">{{ game }}</option>
+      </select>
+    </div>
+  </div>
+  <div class="zoneEditeur">
+      <label for="editor">Editeur :</label>
+      <input  placeholder="Editeur" type="text" id="editor" name="editor_name">
+  </div>
+  <div class="zoneBtn">
+    <input type="submit" value="Filtrer" class="btnValide">
+    <input type="reset" value="RAZ" class="btnReset">
+  </div>
+</form>

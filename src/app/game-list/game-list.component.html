@@ -1,0 +1,25 @@
+<div class="card" *ngFor="let game of games">
+  <nav class="navbar">  
+    <p>{{ game.ico }}</p>
+    <h1><p>{{ game.name }}</p></h1> 
+    <b><p>{{ game.grade }}/10</p></b>
+  </nav>
+ <div class="gameType"> Jeu de {{game.type}}</div>
+    
+  <img [src]="game.img" class="img" alt="Img">
+  <div class="container">
+      <b>Editeur : </b>{{ game.editeur }}
+      <h4>Description : </h4>{{ game.desc }}
+  </div>
+  <div class="container">
+    <table>
+      <tr>
+          <td><div class="space">FOLLOW</div></td>
+          <td><div class="space">SHARE</div></td>
+          <td><div class="space"> BUY</div></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
